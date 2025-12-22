@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment In JS</title>
+    <style>
+        .container{
+            display: flex;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+             justify-content: center;
+           
+        }
+
+
+        .header{
+            background-color: #f0f0f0;
+            height: 10vh;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+         h1 {
+            color: #ff0000;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .box{
+            /* margin-top: 5rem; */
+            /* gap: 1rem; */
+            /* margin-bottom: 5rem; */
+            margin: 3.5rem;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #333;
+            background-color: #fff;
+            cursor: pointer;
+            /* transition: background-color 0.3s ease; */
+            font-weight: bold;
+            /* text-transform: uppercase; */
+        }
+        .input-section {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #30cf38;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    
+<header>
+    <div class="header">
+        <h1 id="text">Hello</h1>
+    </div>
+</header>
+
+
+        <div class="container">
+            <div class="box" id="redBox">Red</div>
+            <div class="box" id="blueBox">Blue</div>
+            <div class="box" id="greenBox">Green</div>
+            <div class="box" id="yellowBox">Yellow</div>
+        </div>
+
+        <div class="container">
+            <div class="input-section">
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <button id="greetBtn">Greet</button>
+            </div>
+        </div>
+
+
+    <script>
+        // Function to greet the user
+        document.getElementById('greetBtn').addEventListener('click', function(){
+            const name = document.getElementById('nameInput').value; 
+            if (name){
+                document.getElementById('text').textContent ='Hello' + ' ,' + ' ' + name
+            }
+            else{
+                alert("Enter Your Name");
+            }
+        })
+
+
+        // Onclick to Box background change color
+
+        document.getElementById('redBox').addEventListener('click', function(){
+            const color = this.style.backgroundColor ='red';
+                this.style.color = 'white';
+            
+        })
+        document.getElementById('blueBox').addEventListener('click', function(){
+            const color = this.style.backgroundColor ='blue';
+                this.style.color = 'white';
+            
+        })
+
+        document.getElementById('greenBox').addEventListener('click', function(){
+            const color = this.style.backgroundColor ='green';
+                this.style.color = 'white';
+            
+        })
+
+        document.getElementById('yellowBox').addEventListener('click', function(){
+            const color = this.style.backgroundColor ='yellow';
+                this.style.color = 'white';
+            
+        })
+
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
